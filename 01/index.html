@@ -8,19 +8,19 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
-<div id="root"></div>
+<DIV id="root"></DIV>
 <script type="text/babel">
 
     class HomeWork extends React.Component {
         render() {
             return (
-                    <div>
+                    <DIV>
                         <H1>{this.props.header}</H1>
                         <P>Le Lorem Ipsum est <A link="https://ru.wiktionary.org/wiki/simplement">simplement</A> du faux
                             texte employé dans la com
                             position et la mise en page avant impression.</P>
                         <Button text={this.props.alertButtonText} func={click}/>
-                    </div>
+                    </DIV>
             )
         }
     }
@@ -40,6 +40,12 @@
     class A extends React.Component {
         render() {
             return <a href={this.props.link}>{this.props.children}</a>
+        }
+    }
+
+    class DIV extends React.Component {
+        render() {
+            return <div>{this.props.children}</div>
         }
     }
 
